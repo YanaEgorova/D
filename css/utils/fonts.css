@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('../../fonts/Montserrat/Montserrat-Regular.ttf'),
+    local('Montserrat'),
+    url('../../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'),
+    url('../../fonts/Montserrat/montserrat.woff') format('woff'),
+    url('../../fonts/Montserrat/montserrat.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('../../fonts/Montserrat/Montserrat-Bold.ttf'), local('Montserrat'),
+    url('../../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'),
+    url('../../fonts/Montserrat/montserratbold.woff') format('woff'),
+    url('../../fonts/Montserrat/montserratbold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('../../fonts/Montserrat/Montserrat-Black.ttf'),
+    local('Montserrat-Black'),
+    url('../../fonts/Montserrat/montserratblack.woff2') format('woff2'),
+    url('../../fonts/Montserrat/montserratblack.woff') format('woff'),
+    url('../../fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair';
+  src: local('../../fonts/Playfair/PlayfairDisplay-Regular.ttf'),
+    local('Playfair'),
+    url('../../fonts/Playfair/PlayfairDisplay-Regular.ttf') format('truetype'),
+    url('../../fonts/Playfair/Playfairdisplayregular.woff') format('woff'),
+    url('../../fonts/Playfair/Playfairdisplayregular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}

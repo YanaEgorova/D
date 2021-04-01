@@ -1,0 +1,15 @@
+:root {
+  --main-bg-color: #ffffff;
+  --sub-bg-color: #000000;
+  --main-text-color: #000000;
+  --sub-text-color: #ffffff;
+  --gray-color: #f3f3f3;
+  --dark-gray-color: #a5a5a5;
+  --accent-color: #a35c7f;
+  --error-color: #ff2052;
+  --preloader-bg-color: #1c1a19;
+  --main-font: 'Montserrat', sans-serif;
+  --sub-font: 'Playfair', serif;
+
+  font-size: 62.5%;
+}

@@ -1,0 +1,263 @@
+.preloader-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: calc(var(--vh, 1vh) * 100);
+  z-index: 1000000000090000;
+  background-color: var(--preloader-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.preloader-inactive .preloader-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.loader-svg {
+  position: absolute;
+  top: 0%;
+}
+
+.loader.animate {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fade-out {
+  -webkit-animation-name: fade-out;
+  animation-name: fade-out;
+}
+
+/* Flex helpers */
+
+.flex.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+.flex .row,
+.flex .full-width {
+  width: 100%;
+}
+.flex.justify-content-end {
+  justify-content: flex-end;
+}
+.flex.flex-column {
+  flex-direction: column;
+}
+.flex.justify-space-around {
+  justify-content: space-around;
+}
+.flex.justify-space-between {
+  justify-content: space-between;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+}
+
+.loader-svg {
+  -webkit-animation-name: preloader-in;
+  animation-name: preloader-in;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.preloader-overlay .preloader.out svg {
+  -webkit-animation-name: preloader-out;
+  animation-name: preloader-out;
+}
+.preloader-overlay .preloader.animate .outer {
+  -webkit-animation-name: show100;
+  animation-name: show100;
+  -webkit-animation-duration: 2.3s;
+  animation-duration: 2.3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  opacity: 1;
+}
+.preloader-overlay .preloader .logo {
+  opacity: 0;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  background: transparent url('../../img/svg/logo.svg') no-repeat center center;
+  background-size: contain;
+  text-indent: -99999px;
+  padding: 5px;
+}
+.preloader-overlay .preloader .logo.fade-out {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+
+@-webkit-keyframes preloader-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes preloader-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes preloader-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes preloader-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.outer {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 99;
+  stroke-dashoffset: 0;
+  opacity: 0;
+}
+
+.preloader .outer {
+  stroke-dasharray: 502;
+}
+
+.outer.loading {
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.background {
+  opacity: 0.5;
+  stroke: #fff;
+  stroke-width: 2;
+  fill: transparent;
+}
+
+.animate .outer {
+  -webkit-animation-name: show100;
+  animation-name: show100;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  opacity: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}

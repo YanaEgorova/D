@@ -1,0 +1,11 @@
+@import './utils/normalize.css';
+@import './libs/swiper-bundle.min.css';
+@import './utils/fonts.css';
+@import './utils/vars.css';
+@import './utils/common.css';
+@import './styles/header.css';
+@import './styles/main.css';
+@import './styles/menu.css';
+@import './styles/preloader.css';
+@import './styles/projects.css';
+@import './styles/404.css';
